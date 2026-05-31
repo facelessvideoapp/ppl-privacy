@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Parental Lock for Kids & Teens</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --indigo: #4338ca;
+    --indigo-light: #eef2ff;
+    --indigo-mid: #6366f1;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --bg: #ffffff;
+    --bg-soft: #f8fafc;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: var(--text-primary);
+    background: var(--bg);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--indigo);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-icon svg { width: 18px; height: 18px; fill: white; }
+
+  .nav-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .nav-badge {
+    font-size: 12px;
+    padding: 4px 10px;
+    background: var(--indigo-light);
+    color: var(--indigo);
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #eef2ff 0%, #f0fdf4 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 64px 24px 56px;
+    text-align: center;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--indigo);
+    background: white;
+    border: 1px solid #c7d2fe;
+    border-radius: 20px;
+    padding: 5px 14px;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+
+  .hero-pills {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+
+  .pill-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22c55e;
+    flex-shrink: 0;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .toc {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 48px;
+  }
+
+  .toc-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+  }
+
+  .toc ol {
+    list-style: none;
+    counter-reset: toc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 24px;
+  }
+
+  .toc li {
+    counter-increment: toc;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .toc li::before {
+    content: counter(toc, decimal-leading-zero);
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 600;
+    min-width: 20px;
+  }
+
+  .toc a {
+    font-size: 14px;
+    color: var(--indigo-mid);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .toc a:hover { text-decoration: underline; }
+
+  .section {
+    margin-bottom: 48px;
+    scroll-margin-top: 80px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .section-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--indigo);
+    background: var(--indigo-light);
+    border-radius: 6px;
+    padding: 4px 8px;
+    margin-top: 3px;
+    flex-shrink: 0;
+    letter-spacing: 0.05em;
+  }
+
+  .section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.3;
+  }
+
+  .section p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .section p:last-child { margin-bottom: 0; }
+
+  .highlight-box {
+    background: var(--indigo-light);
+    border-left: 3px solid var(--indigo);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+
+  .highlight-box p {
+    font-size: 15px;
+    color: var(--indigo);
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .data-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .data-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .data-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--indigo-mid);
+    margin-top: 9px;
+    flex-shrink: 0;
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 48px 0;
+  }
+
+  .contact-card {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    text-align: center;
+  }
+
+  .contact-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+  }
+
+  .contact-card p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+
+  .contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--indigo);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 10px;
+    transition: opacity 0.2s;
+  }
+
+  .contact-email:hover { opacity: 0.88; }
+
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+    background: var(--bg-soft);
+  }
+
+  .footer-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .footer-meta span {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .footer-meta span strong {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 600px) {
+    .toc ol { grid-template-columns: 1fr; }
+    .hero { padding: 48px 20px 40px; }
+    .container { padding: 40px 20px 60px; }
+    .nav-badge { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-brand" href="#">
+    <div class="nav-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6L12 2zm0 4a3 3 0 110 6 3 3 0 010-6zm0 14c-2.67 0-5.03-1.38-6.41-3.48C7.03 15.08 9.41 14 12 14s4.97 1.08 6.41 2.52C16.03 18.62 14.67 20 12 20z"/>
+      </svg>
+    </div>
+    <span class="nav-name">Parental Lock</span>
+  </a>
+  <span class="nav-badge">Privacy Policy</span>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5L12 1z"/></svg>
+    Privacy Policy
+  </div>
+  <h1>Your Data Stays<br>On Your Device</h1>
+  <p class="hero-sub">Parental Lock collects no personal information. No servers. No tracking. No accounts. Everything works entirely on your phone.</p>
+  <div class="hero-pills">
+    <span class="pill"><span class="pill-dot"></span>Zero data collection</span>
+    <span class="pill"><span class="pill-dot"></span>100% offline</span>
+    <span class="pill"><span class="pill-dot"></span>No accounts required</span>
+    <span class="pill"><span class="pill-dot"></span>COPPA compliant</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#data-collection">Data We Collect</a></li>
+      <li><a href="#biometric">Biometric Data</a></li>
+      <li><a href="#local-storage">Local Storage</a></li>
+      <li><a href="#third-party">Third Party Services</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#permissions">App Permissions</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#changes">Policy Changes</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="data-collection">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Data We Collect</h2>
+    </div>
+    <div class="highlight-box">
+      <p>We collect absolutely nothing. Parental Lock operates 100% offline and does not transmit any data to any server, company, or third party — ever.</p>
+    </div>
+    <p>Parental Lock is built on a single principle: your family's information is yours alone. There is no user account, no registration, no email, no phone number, and no cloud storage of any kind. The app functions entirely within your device's local storage.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="biometric">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Biometric Data</h2>
+    </div>
+    <p>Parental Lock uses Android's built-in Biometric API to verify the parent's identity for unlocking. This means:</p>
+    <ul class="data-list">
+      <li>Your fingerprint or face data is processed entirely by your phone's secure hardware enclave</li>
+      <li>Parental Lock never sees, reads, stores, or transmits your biometric data</li>
+      <li>The app only receives a simple success or failure result from Android</li>
+      <li>Your biometric data never leaves your device under any circumstances</li>
+    </ul>
+    <p>This is identical to how any other app that uses Android's fingerprint or face unlock works — the biometric itself is always handled by the OS, never by the app.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="local-storage">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Local Storage</h2>
+    </div>
+    <p>The following minimal data is stored locally on your device only and is never sent anywhere:</p>
+    <ul class="data-list">
+      <li>Timer duration preference (e.g. 30 minutes)</li>
+      <li>Backup PIN (stored securely in Android SharedPreferences)</li>
+      <li>App setup completion status</li>
+      <li>Battery optimization confirmation flag</li>
+      <li>Usage session history (start time, end time, duration) — stored locally for the Usage Tracker screen only</li>
+    </ul>
+    <p>All of this data is automatically deleted when you uninstall the app. There is no backup copy anywhere.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="third-party">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Third Party Services</h2>
+    </div>
+    <p>Parental Lock does not integrate with any third party analytics, advertising, crash reporting, or tracking services. Specifically, we do not use:</p>
+    <ul class="data-list">
+      <li>Google Analytics or Firebase Analytics</li>
+      <li>Facebook SDK or any Meta services</li>
+      <li>Crashlytics or any crash reporting</li>
+      <li>Any advertising networks or SDKs</li>
+      <li>Any data brokers or marketing platforms</li>
+    </ul>
+    <p>The app does not make any external network connections. All functionality works entirely offline on your device.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="children">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Children's Privacy</h2>
+    </div>
+    <p>Parental Lock is a tool operated by parents or guardians and installed on a child's device. The app does not knowingly collect any personal information from children or adults.</p>
+    <p>We are fully compliant with the Children's Online Privacy Protection Act (COPPA), the General Data Protection Regulation (GDPR), and all applicable regional children's privacy laws. Since we collect no data at all, there is no data to protect, share, or delete.</p>
+    <div class="highlight-box">
+      <p>No data is ever collected from children. The app functions as a local tool only — it locks the device and keeps a local usage log visible only to the parent on that device.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="permissions">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>App Permissions</h2>
+    </div>
+    <p>Parental Lock requests the following Android permissions, each with a specific purpose:</p>
+    <ul class="data-list">
+      <li><strong>Display over other apps</strong> — required to show the lock screen overlay on top of the child's activity</li>
+      <li><strong>Notifications</strong> — required to show the countdown timer notification with Pause/Resume controls</li>
+      <li><strong>Foreground Service</strong> — required to keep the timer running reliably in the background</li>
+      <li><strong>Receive Boot Completed</strong> — required to restart protection automatically after the phone is restarted</li>
+      <li><strong>Use Biometric / Use Fingerprint</strong> — required to verify the parent's identity for unlocking</li>
+      <li><strong>Read Phone State</strong> (optional) — used to hide the lock screen during incoming calls so they can always be answered</li>
+      <li><strong>Schedule Exact Alarm</strong> — required to trigger the lock screen at precisely the right time</li>
+      <li><strong>Device Administrator</strong> — required to prevent the child from uninstalling the app</li>
+    </ul>
+    <p>None of these permissions are used to collect, transmit, or share data of any kind.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="security">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h2>Security</h2>
+    </div>
+    <p>Since Parental Lock stores no data on external servers, there is no server-side security risk. All data stays on the device, protected by Android's built-in security model.</p>
+    <ul class="data-list">
+      <li>The backup PIN is stored in Android SharedPreferences with device-level encryption</li>
+      <li>Biometric verification uses Android's Trusted Execution Environment (TEE)</li>
+      <li>The Device Administrator feature prevents unauthorized uninstallation</li>
+      <li>Changing the backup PIN requires biometric verification first</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="changes">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <h2>Policy Changes</h2>
+    </div>
+    <p>If we ever update this privacy policy, the updated version will be published on this page with a new effective date and included in the app update notes on the Play Store.</p>
+    <p>Our core commitment will never change: Parental Lock will not collect, store, or transmit your personal data. If that ever changes in a future version, it will be clearly disclosed and require explicit user consent.</p>
+    <p style="font-size:14px; color: var(--text-muted);">Effective date: June 2026 &nbsp;·&nbsp; Last updated: June 2026</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section" id="contact">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <h2>Contact Us</h2>
+    </div>
+    <p>If you have any questions about this privacy policy or how Parental Lock handles data, please reach out. We are happy to clarify anything.</p>
+    <div class="contact-card">
+      <h3>Get in touch</h3>
+      <p>Questions about privacy? We'll respond within 48 hours.</p>
+      <a class="contact-email" href="mailto:support.audionewsdaily@gmail.com">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        support.audionewsdaily@gmail.com
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-meta">
+    <span><strong>Parental Lock for Kids & Teens</strong></span>
+    <span>·</span>
+    <span>Version 1.0</span>
+    <span>·</span>
+    <span>Android</span>
+    <span>·</span>
+    <span>Effective June 2026</span>
+  </div>
+  <p class="footer-copy">© 2026 Parental Lock. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
