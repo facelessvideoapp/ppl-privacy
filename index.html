@@ -6,144 +6,278 @@
   <title>Privacy Policy – KidCurfew</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; max-width: 860px; margin: 0 auto; padding: 40px 24px 80px; color: #1e293b; line-height: 1.8; background: #f8fafc; }
-    .hero { background: #4f46e5; color: white; border-radius: 16px; padding: 40px 32px; margin-bottom: 32px; }
-    .hero h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
-    .hero p { font-size: 15px; opacity: 0.85; line-height: 1.7; }
-    .pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-    .pill { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 5px 14px; font-size: 13px; font-weight: 500; }
-    .card { background: white; border-radius: 14px; padding: 28px; margin-bottom: 16px; border: 1px solid #e2e8f0; }
-    .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-    .num { background: #eef2ff; color: #4338ca; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 6px; letter-spacing: 0.5px; }
-    h2 { font-size: 17px; font-weight: 700; color: #0f172a; }
-    p { font-size: 14px; color: #475569; margin-bottom: 12px; line-height: 1.8; }
-    p:last-child { margin-bottom: 0; }
-    ul { margin: 10px 0 12px 0; padding-left: 0; list-style: none; }
-    ul li { font-size: 14px; color: #475569; padding: 4px 0 4px 20px; position: relative; line-height: 1.7; }
-    ul li::before { content: '—'; position: absolute; left: 0; color: #4f46e5; }
-    .highlight { background: #f0f4ff; border: 1px solid #e0e7ff; border-radius: 10px; padding: 14px 16px; margin: 12px 0; }
-    .highlight p { color: #3730a3; margin: 0; font-size: 13px; }
-    footer { text-align: center; margin-top: 48px; color: #94a3b8; font-size: 13px; line-height: 2; }
-    a { color: #4f46e5; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; background: #f0f2f5; color: #1e293b; line-height: 1.8; }
+
+    /* NAV */
+    nav { background: #ffffff; border-bottom: 1px solid #e2e8f0; padding: 0 32px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-icon { width: 32px; height: 32px; background: #4f46e5; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+    .nav-logo-text { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .nav-badge { font-size: 11px; background: #eef2ff; color: #4338ca; padding: 3px 10px; border-radius: 20px; font-weight: 600; border: 1px solid #c7d2fe; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #818cf8 100%); padding: 80px 24px 100px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%); pointer-events: none; }
+    .hero-icon { width: 72px; height: 72px; background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.3); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 24px; }
+    .hero h1 { font-size: 36px; font-weight: 800; color: #ffffff; margin-bottom: 16px; letter-spacing: -0.5px; }
+    .hero-sub { font-size: 16px; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 32px; line-height: 1.8; }
+    .pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 40px; }
+    .pill { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 6px 16px; font-size: 13px; font-weight: 500; color: #ffffff; }
+    .hero-meta { font-size: 13px; color: rgba(255,255,255,0.6); }
+
+    /* WAVE */
+    .wave { display: block; background: #f0f2f5; margin-top: -2px; }
+
+    /* CONTENT */
+    .content { max-width: 860px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    /* INTRO STRIP */
+    .intro-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 48px; }
+    .intro-item { background: #ffffff; border-radius: 12px; padding: 20px; border: 1px solid #e2e8f0; display: flex; align-items: flex-start; gap: 12px; }
+    .intro-item-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .icon-blue { background: #eef2ff; }
+    .icon-green { background: #f0fdf4; }
+    .icon-amber { background: #fffbeb; }
+    .icon-purple { background: #faf5ff; }
+    .intro-item-text { font-size: 13px; font-weight: 600; color: #0f172a; line-height: 1.4; }
+    .intro-item-sub { font-size: 12px; color: #64748b; margin-top: 2px; line-height: 1.4; }
+
+    /* SECTION LABEL */
+    .section-label { font-size: 11px; font-weight: 700; color: #4f46e5; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; margin-top: 48px; }
+    .section-label:first-of-type { margin-top: 0; }
+
+    /* CARD */
+    .card { background: #ffffff; border-radius: 16px; padding: 32px; margin-bottom: 12px; border: 1px solid #e2e8f0; transition: box-shadow 0.2s; }
+    .card:hover { box-shadow: 0 4px 24px rgba(79,70,229,0.08); }
+    .card-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+    .num { background: #eef2ff; color: #4338ca; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; letter-spacing: 0.5px; flex-shrink: 0; }
+    .card h2 { font-size: 17px; font-weight: 700; color: #0f172a; }
+    .card p { font-size: 14px; color: #475569; margin-bottom: 12px; line-height: 1.9; }
+    .card p:last-child { margin-bottom: 0; }
+    ul { margin: 10px 0 14px; padding-left: 0; list-style: none; }
+    ul li { font-size: 14px; color: #475569; padding: 5px 0 5px 22px; position: relative; line-height: 1.7; border-bottom: 1px solid #f8fafc; }
+    ul li:last-child { border-bottom: none; }
+    ul li::before { content: ''; position: absolute; left: 0; top: 13px; width: 8px; height: 8px; border-radius: 50%; background: #4f46e5; }
+
+    /* HIGHLIGHT */
+    .highlight { background: #f0f4ff; border-left: 3px solid #4f46e5; border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 14px 0; }
+    .highlight p { color: #3730a3; margin: 0; font-size: 13px; line-height: 1.8; }
+
+    /* CONTACT CARD */
+    .contact-card { background: linear-gradient(135deg, #eef2ff, #f0f4ff); border: 1px solid #c7d2fe; border-radius: 16px; padding: 32px; text-align: center; margin-bottom: 12px; }
+    .contact-card h2 { font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 8px; }
+    .contact-card p { color: #475569; font-size: 14px; margin-bottom: 16px; }
+    .email-btn { display: inline-block; background: #4f46e5; color: #ffffff; font-size: 14px; font-weight: 600; padding: 12px 28px; border-radius: 10px; text-decoration: none; }
+    .email-btn:hover { background: #4338ca; }
+    .response-time { font-size: 12px; color: #64748b; margin-top: 12px; }
+
+    /* FOOTER */
+    footer { background: #ffffff; border-top: 1px solid #e2e8f0; padding: 32px 24px; text-align: center; }
+    .footer-logo { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px; }
+    .footer-logo-icon { width: 28px; height: 28px; background: #4f46e5; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+    .footer-logo-text { font-size: 15px; font-weight: 700; color: #0f172a; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; }
+    .footer-links a { font-size: 13px; color: #64748b; text-decoration: none; }
+    .footer-links a:hover { color: #4f46e5; }
+    footer p { font-size: 12px; color: #94a3b8; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 26px; }
+      .hero-sub { font-size: 14px; }
+      .card { padding: 20px; }
+      nav { padding: 0 16px; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <div class="nav-logo-icon">🛡️</div>
+      <div class="nav-logo-text">KidCurfew</div>
+    </div>
+    <div class="nav-badge">Privacy Policy</div>
+  </nav>
+
+  <!-- HERO -->
   <div class="hero">
-    <h1>🛡️ KidCurfew — Privacy Policy</h1>
-    <p>KidCurfew is built with your family's privacy in mind. The local timer works entirely offline. When you use remote pairing, only the minimum data needed to relay commands and app activity summaries between your paired devices is transmitted — your data is never sold or shared.</p>
+    <div class="hero-icon">🔒</div>
+    <h1>Your Family's Privacy Matters</h1>
+    <p class="hero-sub">KidCurfew is built with privacy at its core. The local timer works entirely offline. When you use remote pairing, only the minimum data needed is transmitted — your data is never sold or shared with anyone.</p>
     <div class="pills">
-      <div class="pill">No data sold or shared</div>
-      <div class="pill">Local timer is 100% offline</div>
-      <div class="pill">No advertising</div>
-      <div class="pill">14-day data retention</div>
+      <div class="pill">✓ No data sold or shared</div>
+      <div class="pill">✓ Local timer is 100% offline</div>
+      <div class="pill">✓ No advertising</div>
+      <div class="pill">✓ 14-day data retention</div>
+      <div class="pill">✓ GDPR &amp; COPPA compliant</div>
     </div>
+    <div class="hero-meta">Effective date: July 2026 &nbsp;·&nbsp; Last updated: July 2026</div>
   </div>
 
-  <div class="card">
-    <div class="card-header"><span class="num">01</span><h2>Data We Collect</h2></div>
-    <p>KidCurfew does not collect any personal data.</p>
-    <p>For users of the local timer feature, the application operates entirely offline. No information is transmitted anywhere.</p>
-    <p>For users of the remote pairing feature, only the minimum data required to relay commands between your paired devices is transmitted — such as lock, unlock, and timer duration instructions. This data is used solely to deliver the command and is not stored, analysed, or shared.</p>
-    <p>When app activity monitoring is enabled by a parent, a daily summary of app usage (app names and time spent) is securely transmitted to the paired parent device only. This data is automatically deleted after 14 days and is never accessible to anyone other than the paired parent.</p>
-  </div>
+  <svg class="wave" viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:48px;">
+    <path d="M0,48 C360,0 1080,0 1440,48 L1440,48 L0,48 Z" fill="#f0f2f5"/>
+  </svg>
 
-  <div class="card">
-    <div class="card-header"><span class="num">02</span><h2>Biometric Data</h2></div>
-    <p>Your fingerprint, face, or other biometric data is processed entirely by your device's built-in security hardware and operating system.</p>
-    <p>KidCurfew never accesses, reads, stores, or transmits your biometric data. The application receives only a simple authentication result — success or failure — from the operating system.</p>
-    <p>Your biometric data never leaves your device under any circumstances.</p>
-  </div>
+  <!-- CONTENT -->
+  <div class="content">
 
-  <div class="card">
-    <div class="card-header"><span class="num">03</span><h2>Data Stored on Your Device</h2></div>
-    <p>The following information is stored locally on your device only:</p>
-    <ul>
-      <li>Timer duration preference</li>
-      <li>Backup PIN (stored with device-level encryption)</li>
-      <li>App setup and configuration status</li>
-      <li>Usage session history (for the Usage Tracker feature)</li>
-      <li>Remote pairing identifiers</li>
-      <li>Timer and session state</li>
-    </ul>
-    <div class="highlight">
-      <p>When app activity monitoring is enabled on a child device, a daily summary of app usage (app names and time spent) is securely transmitted to the paired parent device only. This data is automatically deleted after 14 days and is never accessible to anyone other than the paired parent.</p>
+    <!-- INTRO STRIP -->
+    <div class="intro-strip">
+      <div class="intro-item">
+        <div class="intro-item-icon icon-blue">📴</div>
+        <div>
+          <div class="intro-item-text">Fully Offline</div>
+          <div class="intro-item-sub">Local timer needs no internet connection</div>
+        </div>
+      </div>
+      <div class="intro-item">
+        <div class="intro-item-icon icon-green">🔐</div>
+        <div>
+          <div class="intro-item-text">Encrypted</div>
+          <div class="intro-item-sub">PIN stored with device-level encryption</div>
+        </div>
+      </div>
+      <div class="intro-item">
+        <div class="intro-item-icon icon-amber">🗑️</div>
+        <div>
+          <div class="intro-item-text">Auto-Deleted</div>
+          <div class="intro-item-sub">App activity data deleted after 14 days</div>
+        </div>
+      </div>
+      <div class="intro-item">
+        <div class="intro-item-icon icon-purple">🚫</div>
+        <div>
+          <div class="intro-item-text">No Ads Ever</div>
+          <div class="intro-item-sub">No advertising networks or trackers</div>
+        </div>
+      </div>
     </div>
-    <p>All locally stored data is permanently deleted when you uninstall the application.</p>
+
+    <div class="section-label">Data &amp; Privacy</div>
+
+    <div class="card">
+      <div class="card-header"><span class="num">01</span><h2>Data We Collect</h2></div>
+      <p>KidCurfew does not collect any personal data.</p>
+      <p>For users of the local timer feature, the application operates entirely offline. No information is transmitted anywhere.</p>
+      <p>For users of the remote pairing feature, only the minimum data required to relay commands between your paired devices is transmitted — such as lock, unlock, and timer duration instructions. This data is used solely to deliver the command and is not stored, analysed, or shared.</p>
+      <div class="highlight">
+        <p>When app activity monitoring is enabled by a parent, a daily summary of app usage (app names and time spent) is securely transmitted to the paired parent device only. This data is automatically deleted after 14 days and is never accessible to anyone other than the paired parent.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="num">02</span><h2>Biometric Data</h2></div>
+      <p>Your fingerprint, face, or other biometric data is processed entirely by your device's built-in security hardware and operating system.</p>
+      <p>KidCurfew never accesses, reads, stores, or transmits your biometric data. The application receives only a simple authentication result — success or failure — from the operating system.</p>
+      <p>Your biometric data never leaves your device under any circumstances.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="num">03</span><h2>Data Stored on Your Device</h2></div>
+      <p>The following information is stored locally on your device only:</p>
+      <ul>
+        <li>Timer duration preference</li>
+        <li>Backup PIN (stored with device-level encryption)</li>
+        <li>App setup and configuration status</li>
+        <li>Usage session history (for the Usage Tracker feature)</li>
+        <li>Remote pairing identifiers</li>
+        <li>Timer and session state</li>
+      </ul>
+      <div class="highlight">
+        <p>When app activity monitoring is enabled on a child device, a daily summary of app usage (app names and time spent) is securely transmitted to the paired parent device only. This data is automatically deleted after 14 days and is never accessible to anyone other than the paired parent.</p>
+      </div>
+      <p>All locally stored data is permanently deleted when you uninstall the application.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="num">04</span><h2>Remote Pairing and App Activity</h2></div>
+      <p>When you use the remote pairing feature, a secure relay service is used to transmit information between your parent device and the paired child device.</p>
+      <p>The data involved in this process is:</p>
+      <ul>
+        <li>A temporary pairing code (expires after 24 hours)</li>
+        <li>Command type and timestamp (e.g. lock, unlock, timer duration)</li>
+        <li>Device status (locked or unlocked)</li>
+        <li>Daily app activity summaries (app names and time spent per app) — only when app activity monitoring is enabled</li>
+      </ul>
+      <p>App activity data is shared exclusively between the paired parent and child devices. It is automatically deleted after 14 days. No names, email addresses, phone numbers, location data, or browsing history is ever collected.</p>
+      <p>All pairing data is removed when you remove a paired device or sign out.</p>
+    </div>
+
+    <div class="section-label">Services &amp; Compliance</div>
+
+    <div class="card">
+      <div class="card-header"><span class="num">05</span><h2>Third-Party Services</h2></div>
+      <p>The remote pairing feature relies on a third-party secure relay service to transmit commands between devices. This service is used only to deliver commands and does not have access to any personal information.</p>
+      <p>For users of the local timer feature only, no third-party services are used and no network connections are made.</p>
+      <p>KidCurfew does not use any analytics platforms, advertising networks, crash reporting tools, or data brokers.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="num">06</span><h2>Children's Privacy</h2></div>
+      <p>KidCurfew is a tool operated by parents and guardians. The application is not directed at children and does not knowingly collect personal information from children.</p>
+      <p>App activity monitoring is enabled and controlled exclusively by the parent. The data collected is limited to app names and time spent — no personal communications, location, or browsing history is ever collected.</p>
+      <p>KidCurfew is inherently compliant with COPPA, GDPR, and applicable regional children's privacy legislation.</p>
+    </div>
+
+    <div class="section-label">Permissions &amp; Security</div>
+
+    <div class="card">
+      <div class="card-header"><span class="num">07</span><h2>App Permissions</h2></div>
+      <p>KidCurfew requests only the permissions required for its stated functionality:</p>
+      <ul>
+        <li>Display over other apps — to show the lock screen over other applications</li>
+        <li>Notifications — to display the timer countdown control</li>
+        <li>Foreground Service — to maintain the timer while the app is in the background</li>
+        <li>Boot Completed — to restart the timer service after device reboot</li>
+        <li>Biometric — to verify parent identity for unlock and pause</li>
+        <li>Phone State — to temporarily suspend the lock screen during phone calls</li>
+        <li>Schedule Exact Alarm — to trigger the lock screen at the precise end of a timer</li>
+        <li>Wake Lock — to keep the timer active when the screen is off</li>
+        <li>Device Administrator — to add a layer of protection against unauthorised uninstallation</li>
+        <li>Internet — required for the remote pairing feature only</li>
+        <li>App Activity Access — required on the child device only, and only when the parent enables app activity monitoring. This permission allows KidCurfew to read which apps have been used and for how long on the child's device, so the parent can view screen time insights. This information is shared only with the paired parent device and is never used for advertising or shared with third parties.</li>
+      </ul>
+      <p>No permissions are used to collect personal data for commercial purposes.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="num">08</span><h2>Data Security</h2></div>
+      <p>For local operation, there is no server-side risk as no data is transmitted externally.</p>
+      <p>The backup PIN is stored using device-level encryption. Biometric verification is handled by your device's secure hardware. Commands transmitted during remote pairing are protected in transit and accessible only to the authenticated devices involved in the pairing.</p>
+      <p>App activity summaries are transmitted securely and are accessible only to the paired parent device.</p>
+    </div>
+
+    <div class="section-label">Updates &amp; Contact</div>
+
+    <div class="card">
+      <div class="card-header"><span class="num">09</span><h2>Changes to This Policy</h2></div>
+      <p>If we update this Privacy Policy, the revised version will be made available within the application and included in the app update release notes.</p>
+      <p>Our fundamental commitment will not change: KidCurfew will not collect, sell, or misuse your personal data.</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>📬 Contact Us</h2>
+      <p>For questions or concerns regarding this Privacy Policy, please reach out to our support team. We aim to respond within 48 hours.</p>
+      <a href="mailto:support.audionewsdaily@gmail.com" class="email-btn">support.audionewsdaily@gmail.com</a>
+      <div class="response-time">⏱ We typically respond within 48 hours</div>
+    </div>
+
   </div>
 
-  <div class="card">
-    <div class="card-header"><span class="num">04</span><h2>Remote Pairing and App Activity</h2></div>
-    <p>When you use the remote pairing feature, a secure relay service is used to transmit information between your parent device and the paired child device.</p>
-    <p>The data involved in this process is:</p>
-    <ul>
-      <li>A temporary pairing code (expires after 24 hours)</li>
-      <li>Command type and timestamp (e.g. lock, unlock, timer duration)</li>
-      <li>Device status (locked or unlocked)</li>
-      <li>Daily app activity summaries (app names and time spent per app) — only when app activity monitoring is enabled</li>
-    </ul>
-    <p>App activity data is shared exclusively between the paired parent and child devices. It is automatically deleted after 14 days. No names, email addresses, phone numbers, location data, or browsing history is ever collected.</p>
-    <p>All pairing data is removed when you remove a paired device or sign out.</p>
-  </div>
-
-  <div class="card">
-    <div class="card-header"><span class="num">05</span><h2>Third-Party Services</h2></div>
-    <p>The remote pairing feature relies on a third-party secure relay service to transmit commands between devices. This service is used only to deliver commands and does not have access to any personal information.</p>
-    <p>For users of the local timer feature only, no third-party services are used and no network connections are made.</p>
-    <p>KidCurfew does not use any analytics platforms, advertising networks, crash reporting tools, or data brokers.</p>
-  </div>
-
-  <div class="card">
-    <div class="card-header"><span class="num">06</span><h2>Children's Privacy</h2></div>
-    <p>KidCurfew is a tool operated by parents and guardians. The application is not directed at children and does not knowingly collect personal information from children.</p>
-    <p>App activity monitoring is enabled and controlled exclusively by the parent. The data collected is limited to app names and time spent — no personal communications, location, or browsing history is ever collected.</p>
-    <p>KidCurfew is inherently compliant with COPPA, GDPR, and applicable regional children's privacy legislation.</p>
-  </div>
-
-  <div class="card">
-    <div class="card-header"><span class="num">07</span><h2>App Permissions</h2></div>
-    <p>KidCurfew requests only the permissions required for its stated functionality:</p>
-    <ul>
-      <li>Display over other apps — to show the lock screen over other applications</li>
-      <li>Notifications — to display the timer countdown control</li>
-      <li>Foreground Service — to maintain the timer while the app is in the background</li>
-      <li>Boot Completed — to restart the timer service after device reboot</li>
-      <li>Biometric — to verify parent identity for unlock and pause</li>
-      <li>Phone State — to temporarily suspend the lock screen during phone calls</li>
-      <li>Schedule Exact Alarm — to trigger the lock screen at the precise end of a timer</li>
-      <li>Wake Lock — to keep the timer active when the screen is off</li>
-      <li>Device Administrator — to add a layer of protection against unauthorised uninstallation</li>
-      <li>Internet — required for the remote pairing feature only</li>
-      <li>App Activity Access — required on the child device only, and only when the parent enables app activity monitoring. This permission allows KidCurfew to read which apps have been used and for how long on the child's device, so the parent can view screen time insights. This information is shared only with the paired parent device and is never used for advertising or shared with third parties.</li>
-    </ul>
-    <p>No permissions are used to collect personal data for commercial purposes.</p>
-  </div>
-
-  <div class="card">
-    <div class="card-header"><span class="num">08</span><h2>Data Security</h2></div>
-    <p>For local operation, there is no server-side risk as no data is transmitted externally.</p>
-    <p>The backup PIN is stored using device-level encryption. Biometric verification is handled by your device's secure hardware. Commands transmitted during remote pairing are protected in transit and accessible only to the authenticated devices involved in the pairing.</p>
-    <p>App activity summaries are transmitted securely and are accessible only to the paired parent device.</p>
-  </div>
-
-  <div class="card">
-    <div class="card-header"><span class="num">09</span><h2>Changes to This Policy</h2></div>
-    <p>If we update this Privacy Policy, the revised version will be made available within the application and included in the app update release notes.</p>
-    <p>Our fundamental commitment will not change: KidCurfew will not collect, sell, or misuse your personal data.</p>
-  </div>
-
-  <div class="card">
-    <div class="card-header"><span class="num">10</span><h2>Contact Us</h2></div>
-    <p>For questions or concerns regarding this Privacy Policy, please contact us at:</p>
-    <p><a href="mailto:support.audionewsdaily@gmail.com">support.audionewsdaily@gmail.com</a></p>
-    <p>We aim to respond within 48 hours.</p>
-  </div>
-
+  <!-- FOOTER -->
   <footer>
-    <p>Effective date: July 2026</p>
-    <p>Last updated: July 2026</p>
-    <p>© 2026 KidCurfew. All rights reserved.</p>
+    <div class="footer-logo">
+      <div class="footer-logo-icon">🛡️</div>
+      <div class="footer-logo-text">KidCurfew</div>
+    </div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+      <a href="mailto:support.audionewsdaily@gmail.com">Support</a>
+    </div>
+    <p>Effective date: July 2026 &nbsp;·&nbsp; Last updated: July 2026</p>
+    <p style="margin-top:6px;">© 2026 KidCurfew. All rights reserved.</p>
   </footer>
 
 </body>
